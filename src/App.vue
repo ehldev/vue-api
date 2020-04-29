@@ -11,15 +11,13 @@
 export default {
   data() {
     return {
-      character: {
-        name: 'Erick',
-        image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
-      }
+      title: 'Home Rick and Morty'
     }
   },
    metaInfo: {
     meta: [
-      {property: 'og:title', content: `Bitch`}
+      {property: 'og:title', content: this.title},
+      {property: 'og:image', content: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'}
     ]
   }
 }

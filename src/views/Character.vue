@@ -51,17 +51,11 @@ export default {
       });
     }
   },
-  metaInfo() {
-    return {
-      meta: [
-        // Facebook OpenGraph
-        { property: "og:title", content: `${this.character.name} - Epiloge` },
-        { property: "og:site_name", content: this.character.name },
-        { property: "og:type", content: "website" },
-        { property: "og:image", content: this.character.image },
-        { property: "og:description", content: this.character.name }
-      ]
-    };
+  metaInfo: {
+    meta: [
+      {property: 'og:title', content: this.character.name},
+      {property: 'og:image', content: this.character.image}
+    ]
   }
 };
 </script>
