@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Character from '../views/Character'
 
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
+
 Vue.use(VueRouter)
 
   const routes = [

@@ -7,6 +7,24 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      character: {
+        name: 'Erick',
+        image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+      }
+    }
+  },
+   metaInfo: {
+    meta: [
+      {property: 'og:title', content: `Bitch`}
+    ]
+  }
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
