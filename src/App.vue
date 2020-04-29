@@ -14,7 +14,8 @@ export default {
       title: 'Home Rick and Morty'
     }
   },
-   metaInfo: {
+  metaInfo: {
+    title: this.title,
     meta: [
       {property: 'og:title', content: `${this.title}`},
       {property: 'og:image', content: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'}
