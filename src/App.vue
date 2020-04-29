@@ -14,13 +14,14 @@ export default {
       title: 'Home Rick and Morty'
     }
   },
-  metaInfo: {
-    title: this.title,
-    meta: [
-      {property: 'og:title', content: `${this.title}`},
-      {property: 'og:image', content: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'}
-    ]
-  }
+  metaInfo() {
+    return {
+      meta: [{
+        property: 'title',
+        content: this.title,
+      }]
+    }
+  },
 }
 </script>
 
