@@ -61,7 +61,7 @@ export default {
   },
   metaInfo() {
         return { 
-            title: "Bitch",
+            title: `${this.character.name}`,
             meta: [
                 {property: 'og:title', content: `${this.character.name}`},
                 {property: 'og:site_name', content: 'Vue Example'},
