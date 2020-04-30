@@ -12,7 +12,16 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    metaTags: [
+      {
+        property: 'og:description',
+        content: 'Vue Rick and Morty'
+      },
+      {
+        title: 'About Page - Example App',
+      }
+    ]
   },
   {
     path: '/personajes/:id',

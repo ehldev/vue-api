@@ -17,11 +17,13 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+/* import { mapState } from "vuex"; */
+import axios from 'axios'
 
 export default {
   data() {
     return {
+      id: this.$route.params.id,
       character: {}
     };
   },
@@ -30,15 +32,21 @@ export default {
   },
   props: ["info"],
   computed: {
-    ...mapState(["characters"]),
+    /* ...mapState(["characters"]), */
     getId: function() {
       return this.$route.params.id;
     }
   },
   methods: {
     getInfo() {
-      console.log(this.characters);
-      this.characters.forEach(item => {
+      let url = `https://rickandmortyapi.com/api/character/${this.id}`
+
+      axios(url)
+        .then(response => {
+          this.character = response.data
+        })
+
+      /* this.characters.forEach(item => {
         let id = this.getId;
 
         if (item.id === id) {
@@ -48,15 +56,21 @@ export default {
 
           return;
         }
-      });
+      }); */
     }
   },
-  metaInfo: {
-    meta: [
-      {property: 'og:title', content: this.character.name},
-      {property: 'og:image', content: this.character.image}
-    ]
-  }
+  metaInfo() {
+        return { 
+            title: "Bitch",
+            meta: [
+                {property: 'og:title', content: `${this.character.name}`},
+                {property: 'og:site_name', content: 'Vue Example'},
+                {property: 'og:type', content: 'website'},
+                {property: 'og:image', content:  `${this.character.image}`},
+                {property: 'og:description', content: `${this.character.name}`}
+            ]
+        }
+    }
 };
 </script>
 

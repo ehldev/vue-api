@@ -11,17 +11,8 @@
 export default {
   data() {
     return {
-      title: 'Home Rick and Morty'
     }
-  },
-  metaInfo() {
-    return {
-      meta: [{
-        property: 'title',
-        content: this.title,
-      }]
-    }
-  },
+  }
 }
 </script>
 
